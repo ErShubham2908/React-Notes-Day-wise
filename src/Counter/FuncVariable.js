@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import DisplayFunc from './DisplayFunc';
 
 function FuncVariable() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState("Shubham");
   return (
-    <>
-        <DisplayFunc value = {{count, setCount}} /> 
-    </>
+    <div>
+      <DisplayFunc value = {{count, setCount}} />
+    </div>
   )
 }
 

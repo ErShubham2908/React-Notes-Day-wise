@@ -8,6 +8,7 @@ class DisplayCompo extends Component{
         }
         // console.log(this.state.val);
     }
+    
 
     handleInc = () => {
         this.setState({val : this.state.val + 1})
