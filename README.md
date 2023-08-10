@@ -102,4 +102,39 @@ Testing | 	Easier to test because they are pure functions | More difficult to te
 - NavLink - The **NavLink** component is similar to Link, but it's used for navigation with additional features, such as styling the link differently when it matches the current URL. It adds an active class to the link when its to prop matches the current URL, making it easier to apply styles to the active link.
 
 ### How do you pass data from parent to child?
-- 
+- Implemenet Props
+
+### Different b/w React and React Native?
+
+|     | React JS | React Native |
+|:---:|:--------:|--------------|
+|1.   | JS Library | Mobile Framework|
+|2.   |Best instrument for building complex highly functional web applications. | Best instrument for a native look and feel in cross-platform mobile applications.|
+|3.   | React.JS implement V-DOM for browser code rendering. |React Native implements native APIs for mobile components rendering. |
+|4.   |React.JS is implemented for web (Browser) platforms. | it's more difficult to work with React Native across different platforms. |
+|5.   |in React.JS, software engineers can create robust animation with the help of CSS. | To implement animation in react native, Software engineers have to use API.|
+
+### How do you switch one component to another, Conditional Rendering?
+ ---
+### Question Time 
+#### need to create three compo, one compo contain 'Welcome to Prepbytes", second compo - 'Welcome to EA23 Session', third compo - contain button, and click on button it should be toggle the compo1 and compo2.
+
+---
+
+### Why do we need keys in react less?
+- In React, "keys" serve as a way to uniquely identify and track elements within a list of items that are being rendered. When you render a dynamic list of items using React, such as in a loop or a mapping function, each item in the list needs a way to be uniquely identified by React so that it can efficiently update and manage the components in the Virtual DOM. Keys help React optimize the process of updating the UI when items are added, removed, or rearranged in the list.
+
+1. Efficient Reconciliation
+2. Preserving State
+3. Performance
+
+### Difference between Axios and fetch?
+|   | Axios | Fetch   |
+| :---| :-----| :-----|
+|1. | Axios is 3rd party library | Builtin API|
+|2. | Faster | Little bit slower |
+|3. | Easier to handle the error | Harder to handle the error|
+|4. | Automatically transform Data into JSON | Have to manually dtransform data | 
+|5. | Need to install form npm (npm i / install axios) | No need to install externally|
+
+### 

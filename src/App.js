@@ -1,5 +1,6 @@
 import './App.css';
-import FuncVariable from './Counter/FuncVariable';
+import ThirdCompo from './Conditional/ThirdCompo';
+// import FuncVariable from './Counter/FuncVariable';
 // import VariableCompo from './Counter/VariableCompo';
 // import CallHooks from './Hooks/CallHooks';
 // import MouseCompo from './MouseCoordinate/MouseCompo';
@@ -11,8 +12,9 @@ function App() {
     <div className="App">
      {/* <VariableCompo /> */}
      {/* <MouseCompo /> */}
-     <FuncVariable />
+     {/* <FuncVariable /> */}
      {/* <CallHooks /> */}
+     <ThirdCompo />
     </div>
   );
 }
