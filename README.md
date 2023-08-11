@@ -137,4 +137,25 @@ Testing | 	Easier to test because they are pure functions | More difficult to te
 |4. | Automatically transform Data into JSON | Have to manually dtransform data | 
 |5. | Need to install form npm (npm i / install axios) | No need to install externally|
 
-### 
+## Day - 4
+
+### What are React Life cycles Explain each one with Example?
+
+- In class components, React provides a set of lifecycle methods that allow you to control and manipulate the rendering and behavior of components as they mount, update, and unmount. The React lifecycle consists of three main phases: Mounting, Updating, and Unmounting.
+1. Mounting Phanse: 
+	- These methods are called when an instance of a component is being created and inserted into the DOM.
+	- **constructor():**  This is the first method that is called when a component is instantiated. It's used to initialize the component's state and bind event handlers.
+	- **render():** This method returns the JSX representation of the component. It's required and must be a pure function that doesn't modify the component state. 
+	- **componentDidMount():** This method is called after the component has been rendered into the DOM. It's commonly used to fetch data from APIs or set up timers.
+  
+2. **Updating Phase:** These methods are called when a component is being re-rendered due to changes in its state or props.
+	- **shouldComponentUpdate(nextProps, nextState):** This method is used to optimize performance by allowing you to control whether a component should re-render or not. It receives the next props and states as arguments and should return a boolean value.
+	- **componentDidUpdate(prevProps, prevState):** This method is called after the component has been re-rendered. It's commonly used to perform actions after an update, like fetching new data based on new props.
+
+3. **Unmounting Phase:** This method is called when a component is being removed from the DOM.
+	- **componentWillUnmount():** This method is called before a component is removed from the DOM. It's used to perform cleanup tasks like canceling timers and removing event listeners.
+  
+### What is Props Drilling Concept ?What is State Uplifting ?
+
+- In a React component hierarchy, props can be passed down from a parent component to its child component, and then to its child's child component, and so on. When a component deep down in the hierarchy needs to access data or functionality that is only available in a higher-level component, the data or functionality must be passed down through all the intermediate components via props. This process is known as "props drilling".
+- State uplifting - Often there will be a need to share state between different components. The common approach to share state between two components is to move the state to common parent of the two components. This approach is called as lifting state up in React.js
