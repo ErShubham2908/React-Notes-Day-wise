@@ -159,3 +159,61 @@ Testing | 	Easier to test because they are pure functions | More difficult to te
 
 - In a React component hierarchy, props can be passed down from a parent component to its child component, and then to its child's child component, and so on. When a component deep down in the hierarchy needs to access data or functionality that is only available in a higher-level component, the data or functionality must be passed down through all the intermediate components via props. This process is known as "props drilling".
 - State uplifting - Often there will be a need to share state between different components. The common approach to share state between two components is to move the state to common parent of the two components. This approach is called as lifting state up in React.js
+
+
+## Hooks
+
+### basic Hooks
+
+1. useState()
+2. useEffect()
+3. useContext()
+
+### Additional Hooks
+1. useReducer()
+2. useRef()
+3. useMemo()
+4. useCallback()
+
+### Router package Hooks
+1. useParams()
+2. useLocation()
+3. useNaviator()
+
+## useState - 
+- It is a hook which we used in functional component and it is used for manage the state variable within the component.
+- usestate hooks allows us to track state in a functional component.
+- State generally refers to data or properties that need to be tracking in an application.
+- usestate can be used to toggle between 2 values, usually true and false.
+- need to import useState from 'react' package.
+  - const [state variable, setter function] = useState(initial value of this state variable);
+  - const [count, setCount] = useState(0);
+  - count is a state variable and setCount a function to change the state variable.
+
+## useEffect - 
+- useEffect is a hook in React that allows functional components to perform side effects during their lifecycle
+- It's a replacement for the lifecycle methods in class components.
+ 
+-  The Effect Hook allows us to perform side effects (an action) in the function components. It does not use components lifecycle methods which are available in class components.
+  - Mounting phase
+  - updating phase ()
+  - unmounting phase (cleanup function)
+- In other words, useEffects Hooks are equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
+- useEffect allows you to run side effects after the component has rendered, and also provides a way to clean up any side effects when the component is unmounted or updated. Here is an example of how to use useEffect:
+- Side effects have common features which the most web applications need to perform, such as:
+- Updating the DOM, Fetching and consuming data from a server API, subscribing to events.
+- useEffect accepts 2 arguments (callback,[dependency])
+
+## useReducer Hooks
+- It does very similiar to setState, It's a different way to manage state using Redux Pattern. Instead of updating the state directly, we dispatch actions, that go to a reducer function, and this function figure out, how to compute the next state.
+- Syntax
+  - **const [state, dispatch] = useReducer(reducer, initialstate)**
+  - state - Name of your state variable
+  - dispatch - if i want to change the state variable, we need dispatch function. has one parameter **action**.
+  - reducer - it is a function, that accept **currect state** and **action** we want to perform.
+  - initialstate - The initial value of state.
+
+### useMemo
+- useMemo is a React hook that allows you to memoize the result of a function, and recompute the result only when the dependencies of the function have changed.
+- In simple terms, useMemo can be used to optimize the performance of your React components by avoiding unnecessary re-renders.
+- useMemo is a React hook that can be used to memoize the result of a function and optimize the performance of your components. By avoiding unnecessary re-renders, you can create faster and more efficient React applications.

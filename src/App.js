@@ -1,8 +1,10 @@
 import './App.css';
-import UseReducer from './Hooks/UseReducer';
-import CycleCompo from './LifeCycle/CycleCompo';
-import A from './PropsDriling/A';
-import Data from './StateUp/Data';
+// import UseEffectCompo from './Hooks/UseEffectCompo';
+// import UseReducerCompo from './Hooks/UseReducerCompo';
+// import UseReducer from './Hooks/UseReducer';
+// import CycleCompo from './LifeCycle/CycleCompo';
+// import A from './PropsDriling/A';
+// import Data from './StateUp/Data';
 // import LifeCycleCompo from './LifeCycle/LifeCycleCompo';
 // import APICompo from './AxiosCompo/APICompo';
 // import ThirdCompo from './Conditional/ThirdCompo';
@@ -10,6 +12,8 @@ import Data from './StateUp/Data';
 // import VariableCompo from './Counter/VariableCompo';
 // import CallHooks from './Hooks/CallHooks';
 // import MouseCompo from './MouseCoordinate/MouseCompo';
+// import UseStateCompo from './Hooks/UseStateCompo';
+import UseMemoCompo from './Hooks/UseMemoCompo';
 
 function App() {
   return (
@@ -24,7 +28,11 @@ function App() {
      {/* <UseReducer /> */}
      {/* <CycleCompo /> */}
      {/* <A /> */}
-     <Data />
+     {/* <Data /> */}
+     {/* <UseStateCompo /> */}
+     {/* <UseEffectCompo /> */}
+     {/* <UseReducerCompo /> */}
+     <UseMemoCompo />
     </div>
   );
 }
