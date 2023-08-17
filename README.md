@@ -264,3 +264,28 @@ Testing | 	Easier to test because they are pure functions | More difficult to te
   4.  Global and Local Installation
   5.  Security
 - NPX (Node package execute)
+
+
+### Do you know about SEO ? Is it true that react js supports SEO support?
+- Yes, I'm familiar with SEO (Search Engine Optimization). SEO is the practice of optimizing a website or web content to improve its visibility in search engine results. The goal is to make your content more accessible and understandable for search engines, which in turn helps improve your website's ranking in search results.
+- Regarding React.js and SEO, it's true that React.js applications can face challenges when it comes to SEO. React.js is a popular JavaScript library for building dynamic and interactive user interfaces, often used to create single-page applications (SPAs). Traditional SPAs built with React.js can sometimes have SEO issues because search engines primarily index static HTML content, and SPAs often load content dynamically using JavaScript.
+- However, React.js has evolved to include features that help address these SEO challenges:
+1. ***Server-Side Rendering (SSR)***: React applications can be rendered on the server side before being sent to the client's browser. This approach generates static HTML content on the server, which search engines can easily crawl and index. This helps improve SEO compared to a purely client-side rendered SPA.
+2. ***Static Site Generation (SSG)***: React frameworks like Next.js provide options for static site generation, where the pages of your application are pre-rendered as static HTML files at build time. This approach can greatly improve SEO by providing search engines with static content to index.
+3. ***Hydration***: Even when using SSR or SSG, React applications need JavaScript to become interactive. This process is known as "hydration." Modern search engines are capable of executing JavaScript to some extent, so they can still index and rank dynamic content, but it's generally safer to provide pre-rendered static content.
+4. ***Meta Tags***: Using appropriate meta tags, such as title, description, and Open Graph tags, can also enhance how your pages appear in search engine results and on social media platforms.
+
+- React.js does support SEO, but it requires implementing the right techniques to ensure that search engines can effectively crawl and index your content. Server-side rendering, static site generation, and proper meta tag usage are some of the strategies that can be employed to improve the SEO of React.js applications.
+
+### What is memory leak and how to overcome?
+- In the context of React, memory leaks can occur when components are not properly cleaned up after they are no longer needed. This can happen when references to components or data are not removed, preventing the JavaScript garbage collector from reclaiming the memory. Here are some common scenarios in React where memory leaks might occur and how to overcome them
+
+1. ***Unsubscribing from Subscriptions and Event Listeners***: If your component subscribes to external data sources or sets up event listeners (like subscriptions to APIs, WebSocket connections, or global event listeners), it's important to unsubscribe or remove these listeners when the component is no longer needed. Failing to do so can keep the component in memory even if it's not being displayed.
+
+   - ***Solution***: Use the appropriate lifecycle method or React hook to unsubscribe or remove event listeners when the component is unmounted. For class components, you can use componentWillUnmount. For functional components, you can use the useEffect hook with a cleanup function. 
+2. ***Clearing Timers and Intervals***: If your component sets up timers or intervals using setTimeout or setInterval, it's crucial to clear them when the component is unmounted. Otherwise, these timers will continue to run and keep the component in memory.
+   - ***Solution***: Use clearTimeout and clearInterval to cancel timers and intervals in the component's cleanup process (usually in componentWillUnmount for class components or the cleanup function in useEffect for functional components).
+3. ***Holding References to Unused Data***: Storing references to data that is no longer needed can prevent the garbage collector from reclaiming memory.
+     - ***Solution***: Make sure to nullify or clear references to data that is no longer required, especially if it's a large object or array. This will allow the garbage collector to identify the memory as no longer in use.
+4. **Optimizing State Management**: In React, excessive use of state can lead to memory leaks if not managed properly. Components that store large amounts of data in state might not release memory as expected.
+    - ***Solution***: Consider using libraries like Redux or React Context for centralized state management, especially for data that needs to be shared among multiple components. Also, make sure to clean up any unnecessary state when a component is unmounted.
