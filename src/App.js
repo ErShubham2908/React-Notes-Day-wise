@@ -1,4 +1,7 @@
 import './App.css';
+import HocCompo from './HOC/HocCompo';
+import HocData from './HOC/HocData';
+import UseCallback from './Hooks/UseCallback';
 // import UseEffectCompo from './Hooks/UseEffectCompo';
 // import UseReducerCompo from './Hooks/UseReducerCompo';
 // import UseReducer from './Hooks/UseReducer';
@@ -14,6 +17,8 @@ import './App.css';
 // import MouseCompo from './MouseCoordinate/MouseCompo';
 // import UseStateCompo from './Hooks/UseStateCompo';
 import UseMemoCompo from './Hooks/UseMemoCompo';
+import UseRefCompo from './Hooks/UseRefCompo';
+import Rcompo from './Routes/Rcompo';
 
 function App() {
   return (
@@ -32,7 +37,12 @@ function App() {
      {/* <UseStateCompo /> */}
      {/* <UseEffectCompo /> */}
      {/* <UseReducerCompo /> */}
-     <UseMemoCompo />
+     {/* <UseMemoCompo /> */}
+     {/* <UseRefCompo /> */}
+     {/* <UseCallback /> */}
+     {/* <Rcompo /> */}
+     {/* <HocCompo /> */}
+     <HocData />
     </div>
   );
 }

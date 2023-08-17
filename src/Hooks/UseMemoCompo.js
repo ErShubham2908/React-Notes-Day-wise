@@ -12,11 +12,13 @@ function UseMemoCompo() {
         console.log(' useMemo called....');
     }, [count])
 
+    
   return (
     <>
       <h2>Hello useMemo Hooks</h2>
         {/* {callMemo()} */}
         {/* {useMemoFunc} */}
+        
         <h2>{count}</h2>
       <button onClick={() => setCount(count + 1)} >Count Inc</button>
         <h2>{rate}</h2>

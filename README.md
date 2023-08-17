@@ -217,3 +217,50 @@ Testing | 	Easier to test because they are pure functions | More difficult to te
 - useMemo is a React hook that allows you to memoize the result of a function, and recompute the result only when the dependencies of the function have changed.
 - In simple terms, useMemo can be used to optimize the performance of your React components by avoiding unnecessary re-renders.
 - useMemo is a React hook that can be used to memoize the result of a function and optimize the performance of your components. By avoiding unnecessary re-renders, you can create faster and more efficient React applications.
+
+### useRef Hooks
+- useRef is a hook in React that provides a way to create a mutable reference to a DOM element or to persist values across renders without causing re-renders.
+- In React, the useRef hook is used to access and interact with DOM elements or to store mutable values that won't trigger a re-render when they change.
+- useRef is a React hook that allows you to create a mutable reference to an element or value, which persists across re-renders of your component.
+- It returns an object with a single property, current, which initially holds the value passed as argument (or undefined if no argument is provided). We can modify the current property without triggering a re-render of the component. This makes it useful for managing mutable values and for accessing the underlying DOM elements.
+
+### Different between callback and useCallback Hooks?
+- callback : A callback function in React is a function that you can pass as a prop to child components, allowing those child components to communicate back to the parent component. This is a general concept and not specific to hooks. Callback functions are often used to achieve component interaction and data flow in React applications. They can be used to handle events or pass data between components, especially when using props.
+- useCallback Hooks : useCallback is a hook provided by React that is used to optimize the performance of your functional components. It's specifically designed to address the issue of unnecessary re-rendering in cases where the dependencies of a function (usually event handlers) change, but you want to avoid recreating the function itself.
+
+### Difference between useEffect and useContext ?
+- **useEffect** : useEffect is used to handle side effects in functional components. Side effects are actions that are not directly related to rendering the component, such as data fetching, subscribing to a WebSocket, manipulating the DOM, etc. This hook allows you to perform these side effects after the component has rendered or when certain dependencies have changed.
+- **useContext** : useContext is used to consume data from the React context API within functional components. Context provides a way to share data, like a global state, between components without passing props through each level of the component tree. The useContext hook allows you to access the value of a context directly within a component.
+- so useEffect is for managing side effects and performing actions after rendering. and useContext is for consuming data fron the context API and accessing global state within a component.
+
+### High Order Component in react js?
+- A Higher-Order Component (HOC) is a pattern used in React to enhance or modify the behavior of components by wrapping them in a higher-order function. It's a way to reuse component logic and add additional functionality without altering the original component's code.
+
+### What is an event in react?
+- An event is an action or occurrence that takes place within a component, typically triggered by user interaction or system events like timers. Events in React are similar to events in traditional web development but are implemented and handled in a slightly different way due to React's virtual DOM and component-based architecture.
+- An event is a mechanism that allows you to respond to user interactions such as clicks, key presses, form submissions, and more.
+- An event in React is an action that can be triggered by a user or a system-generated event.
+  1. Event Name : 
+     1. onClick
+     2. mouseOver
+     3. event.preventDefault();
+     4. onChange
+     5. keydown
+  2. Event Handling
+  3. Event Binding
+  4. Event Object
+  5. Updating state
+
+### Do you prefer function-based or class component and why ?
+- Self Answered
+
+### What do you know about NPM?
+- NPM (Node package Manager) - NPM (Node Package Manager) is a package manager for JavaScript programming language. It's primarily used to manage and distribute open-source JavaScript packages and libraries. NPM allows developers to easily install, update, and manage various packages that can be used in their projects, making it a crucial tool in the Node.js ecosystem.
+
+
+  1.  Package Management
+  2.  Dependency Management
+  3.  Package.json
+  4.  Global and Local Installation
+  5.  Security
+- NPX (Node package execute)
